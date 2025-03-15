@@ -21,6 +21,7 @@
     
 <!--  CODE BY zoliryzik --><style></style><link type="text/css"  rel="stylesheet" href="https://www.expresscarspenza.ru/css/stile.css">
     <link href="https://zoliryzik.github.io/zoliryzik2/assets/css/menu/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Подключение файла со стилями --><!--  CODE BY zoliryzik -->
 <!-- Стили поиска-->
     <style>
@@ -68,5 +69,19 @@ a {
   </div>
 <br>
 <body>
-<script src="https://zoliryzik.github.io/zoliryzik2/assets\js\menu-toggle\script.js"></script>
+    <h1>Выбор блоков</h1>
+    <select id="blockSelector">
+        <option value="none">Выберите блок</option>
+        <option value="payment">1. Оплата и обслуживание</option>
+        <option value="workTypes">2. Виды работы</option>
+        <option value="carBrands">3. Марки автомобилей</option>
+        <option value="oilChange">4. Замена масла</option>
+        <option value="paymentMethod">5. Способы оплаты</option>
+    </select>
+
+    <div id="content"></div>
+
+    <script src="script.js"></script>
+    <script src="https://zoliryzik.github.io/zoliryzik2/assets\js\menu-toggle\script.js"></script>
+</body>
 </html>
