@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .review { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Отзывы</h1>
+    <form id="reviewForm">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="review">Отзыв:</label><br>
+        <textarea id="review" name="review" rows="4" required></textarea><br><br>
+        <button type="submit">Отправить отзыв</button>
+    </form>
+    <h2>Список отзывов:</h2>
+    <div id="reviews"></div>
+    <script src="script.js"></script>
+</body>
+</html>
