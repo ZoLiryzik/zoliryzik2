@@ -16,7 +16,7 @@ blockSelector.addEventListener('change', () => {
 
     if (selectedValue === "none") {
         contentDiv.style.display = "none"; // Скрыть блок
-        contentDiv.innerHTML = ""; // Очистить содержимое
+        contentDiv.innerHTML = "<p>Нажмите, чтобы выбрать нужное</p>"; // Очистить содержимое
     } else {
         const blockData = data[selectedValue];
         contentDiv.style.display = "block"; // Показать блок
