@@ -11,7 +11,8 @@
     <meta name="mailru-domain" content="S1TNSWNzYLeWcnaW">
     <link rel="shortcut icon" href="https://zoliryzik.github.io/assets/img/icon/zoliryzik.png">
     <link href="https://zoliryzik.github.io/assets/css/styles.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/menu/styles.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/menu/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://zoliryzik.github.io/assets/css/news/styles.css" rel="stylesheet" type="text/css">
     <title>ZoLiryzik Community</title>
   </head>
   <body>
@@ -28,18 +29,19 @@
     </nav>
   </div>
 
+  <div class="header">
+    <h1>Новости</h1>
+</div>
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Введите ключевое слово для поиска..." onkeyup="searchNews()">
+    </div>
+    <div id="newsContainer"></div>
+</div>
+
+<script src="https://zoliryzik.github.io/assets/js/news/script.js"></script>
 
 
-    <h1><center>ZoLiryzik Community</center></h1>
-    <h2><center>Официальный сайт сервера в дискорде</center></h2>
-    <br>
-    <h2><center>Самое новое видео</center></h2>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <br>
-    <center>
-      <iframe id="youtube_video" controls="2" frameborder="0" width="300" height="200" allowfullscreen></iframe>
-    </center>
-    <script src="https://zoliryzik.github.io/assets/js/yt/video.js"></script>
-    <script src="assets\js\menu-toggle\script.js"></script>
+
   </body>
 </html>
