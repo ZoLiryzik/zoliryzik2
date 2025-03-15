@@ -1,47 +1,25 @@
-// Загружаем данные из JSON
+// Данные для блоков
 const data = {
-    "blocks": [
-        {
-            "id": "payment",
-            "title": "Основное",
-            "content": "Оплата картой, Парковка, Базовое сервисное обслуживание, Предварительная запись, Официальный автосервис, Выездной сервис, Выездная диагностика автомобиля, Сварочные работы, Гарантия."
-        },
-        {
-            "id": "workTypes",
-            "title": "Виды работы",
-            "content": "Ремонт выхлопной системы, ремонт тормозной системы, ремонт двигателя, полное сервисное обслуживание, замена масла, ремонт ходовой части, ремонт стартеров, компьютерная диагностика автомобиля, чистка форсунок, промывка инжектора, ремонт генераторов, ремонт форсунок, ремонт карданных валов, ремонт топливной системы, ремонт ГБЦ, ремонт амортизаторов, удаление катализаторов, ремонт сцепления, запчасти и комплектующие под заказ, замена ГРМ, установка дополнительного оборудования, эндоскопия двигателя, раскоксовка, ремонт катализаторов, ремонт шаровых опор, ремонт системы охлаждения, ремонт гидроусилителя руля, ремонт рулевых реек."
-        },
-        {
-            "id": "carBrands",
-            "title": "Марки автомобилей",
-            "content": "Китайские, корейские, японские, отечественные, европейские, легковые, импортные."
-        },
-        {
-            "id": "oilChange",
-            "title": "Замена масла",
-            "content": "В легковых автомобилях."
-        },
-        {
-            "id": "paymentMethod",
-            "title": "Способы оплаты",
-            "content": "Банковским переводом, оплата картой, наличными."
-        }
-    ]
+    payment: { title: "Основное", content: "Это основная информация о сервисе." },
+    workTypes: { title: "Виды работы", content: "Мы предоставляем широкий спектр услуг для вашего автомобиля." },
+    carBrands: { title: "Марки автомобилей", content: "Мы работаем с брендами: Toyota, BMW, Mercedes и другие." },
+    oilChange: { title: "Замена масла", content: "Замена масла производится профессионально и быстро." },
+    paymentMethod: { title: "Способы оплаты", content: "Мы принимаем наличные, карты и другие способы оплаты." }
 };
 
-document.getElementById("blockSelector").addEventListener("change", function() {
-    const selectedValue = this.value;
-    const contentDiv = document.getElementById("content");
+// Логика обновления контента при выборе блока
+const blockSelector = document.getElementById("blockSelector");
+const contentDiv = document.getElementById("content");
 
-    // Очистка контента
-    contentDiv.style.display = "none";
-    contentDiv.innerHTML = "";
+blockSelector.addEventListener("change", () => {
+    const selectedValue = blockSelector.value;
 
-    if (selectedValue !== "none") {
-        const selectedBlock = data.blocks.find(block => block.id === selectedValue);
-        if (selectedBlock) {
-            contentDiv.style.display = "block";
-            contentDiv.innerHTML = `<h2>${selectedBlock.title}</h2><p>${selectedBlock.content}</p>`;
-        }
+    if (selectedValue === "none") {
+        contentDiv.style.display = "none"; // Скрываем контент
+        contentDiv.innerHTML = ""; // Очищаем содержимое
+    } else {
+        const blockData = data[selectedValue];
+        contentDiv.style.display = "block"; // Показываем контент
+        contentDiv.innerHTML = `<h2>${blockData.title}</h2><p>${blockData.content}</p>`;
     }
 });
