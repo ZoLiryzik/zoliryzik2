@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экспресс-Авто</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="burger-menu">
+            <div class="menu-header">
+                <a href="#"><img class="menu-icon" src="/img/top/expresscarspenza.png" alt="Лого"></a>
+                <h1 class="menu-title">Экспресс-Авто</h1>
+                <nav class="menu-items">
+                    <a href="#">Главная</a>
+                    <a href="#">Особенности</a>
+                    <a href="#">Новости</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Поиск -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Поиск услуг...">
+    </div>
+
+    <!-- Карточки -->
+    <div class="container" id="productContainer"></div>
+
+    <!-- Модальные окна -->
+    <div id="modalsContainer"></div>
+
+    <footer>
+        <p>Экспресс-Авто © <span id="current-year"></span></p>
+        <div class="social-links">
+            <a href="tel:+79603211010">Позвонить</a>
+            <a href="https://t.me/+79603211010">Телеграм</a>
+            <a href="https://wa.me/79603211010">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
