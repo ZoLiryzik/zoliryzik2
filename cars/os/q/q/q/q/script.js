@@ -20,6 +20,6 @@ blockSelector.addEventListener('change', () => {
     } else {
         const blockData = data[selectedValue];
         contentDiv.style.display = "block"; // Показать блок
-        contentDiv.innerHTML = `<h2>${blockData.title}</h2><p>${blockData.content}</p>`;
+        contentDiv.innerHTML = `<h2 class="text">${blockData.title}</h2><p class="text">${blockData.content}</p>`;
     }
 });
