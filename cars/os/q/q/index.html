@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Кнопка для открытия модального окна -->
+    <button id="openModal">Открыть модальное окно</button>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+
+            <!-- Ваш HTML-контент -->
+            <h1>Выбор блоков</h1>
+            <select id="blockSelector">
+                <option value="none">Выберите блок</option>
+                <option value="payment">1. Основное</option>
+                <option value="workTypes">2. Виды работы</option>
+                <option value="carBrands">3. Марки автомобилей</option>
+                <option value="oilChange">4. Замена масла</option>
+                <option value="paymentMethod">5. Способы оплаты</option>
+            </select>
+            <div id="content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
