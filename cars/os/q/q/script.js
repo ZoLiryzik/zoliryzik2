@@ -1,30 +1,47 @@
+// Загружаем данные из JSON
+const data = {
+    "blocks": [
+        {
+            "id": "payment",
+            "title": "Основное",
+            "content": "Оплата картой, Парковка, Базовое сервисное обслуживание, Предварительная запись, Официальный автосервис, Выездной сервис, Выездная диагностика автомобиля, Сварочные работы, Гарантия."
+        },
+        {
+            "id": "workTypes",
+            "title": "Виды работы",
+            "content": "Ремонт выхлопной системы, ремонт тормозной системы, ремонт двигателя, полное сервисное обслуживание, замена масла, ремонт ходовой части, ремонт стартеров, компьютерная диагностика автомобиля, чистка форсунок, промывка инжектора, ремонт генераторов, ремонт форсунок, ремонт карданных валов, ремонт топливной системы, ремонт ГБЦ, ремонт амортизаторов, удаление катализаторов, ремонт сцепления, запчасти и комплектующие под заказ, замена ГРМ, установка дополнительного оборудования, эндоскопия двигателя, раскоксовка, ремонт катализаторов, ремонт шаровых опор, ремонт системы охлаждения, ремонт гидроусилителя руля, ремонт рулевых реек."
+        },
+        {
+            "id": "carBrands",
+            "title": "Марки автомобилей",
+            "content": "Китайские, корейские, японские, отечественные, европейские, легковые, импортные."
+        },
+        {
+            "id": "oilChange",
+            "title": "Замена масла",
+            "content": "В легковых автомобилях."
+        },
+        {
+            "id": "paymentMethod",
+            "title": "Способы оплаты",
+            "content": "Банковским переводом, оплата картой, наличными."
+        }
+    ]
+};
 
-// Открытие модального окна
-const openModal = document.getElementById("openModal");
-const modal = document.getElementById("myModal");
-const closeModal = document.querySelector(".close");
+document.getElementById("blockSelector").addEventListener("change", function() {
+    const selectedValue = this.value;
+    const contentDiv = document.getElementById("content");
 
-openModal.addEventListener("click", () => {
-  modal.style.display = "block";
-});
+    // Очистка контента
+    contentDiv.style.display = "none";
+    contentDiv.innerHTML = "";
 
-// Закрытие модального окна
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-// Закрытие окна при клике вне его
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
-// Подтверждение выбора
-const confirmChoice = document.getElementById("confirmChoice");
-const modalSelect = document.getElementById("modalSelect");
-
-confirmChoice.addEventListener("click", () => {
-  alert(`Вы выбрали: ${modalSelect.value}`);
-  modal.style.display = "none";
+    if (selectedValue !== "none") {
+        const selectedBlock = data.blocks.find(block => block.id === selectedValue);
+        if (selectedBlock) {
+            contentDiv.style.display = "block";
+            contentDiv.innerHTML = `<h2>${selectedBlock.title}</h2><p>${selectedBlock.content}</p>`;
+        }
+    }
 });
