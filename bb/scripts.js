@@ -96,10 +96,13 @@ function closeModal(id) {
 }
 
 // Функция поиска
+document.getElementById("searchInput").addEventListener("input", searchProducts);
+
 function searchProducts() {
     const query = document.getElementById("searchInput").value.toLowerCase();
     const cards = document.querySelectorAll(".card");
     let found = false;
+
     cards.forEach(card => {
         const text = card.innerText.toLowerCase();
         if (text.includes(query)) {
@@ -109,10 +112,15 @@ function searchProducts() {
             card.style.display = "none";
         }
     });
+
+    const productContainer = document.getElementById("productContainer");
     if (!found) {
         productContainer.innerHTML = "<p>Ничего не найдено.</p>";
+    } else {
+        productContainer.innerHTML = ""; // Очищаем сообщение, если результат найден
     }
 }
+
 
 // Отображение текущего года
 document.getElementById("current-year").textContent = new Date().getFullYear();
