@@ -74,8 +74,8 @@ servicess.forEach(serviceq => {
   <div class="modal-content">
     <span class="close" onclick="closeModal(${serviceq.id})">&times;</span>
     <h1>Заказать услугу</h1>
-    <hr> <!-- Разделительная полоса -->
-    <img class="modal-icon" src="${serviceq.image}" alt="Иконка товара"> <!-- Иконка товара -->
+    <hr>
+    <img class="modal-icon" src="${serviceq.image}" alt="Иконка товара">
     <h3>${serviceq.title}</h3>
     <p>${serviceq.description}</p>
     <div class="info-text">
@@ -86,6 +86,7 @@ servicess.forEach(serviceq => {
     <a href="https://wa.me/79603211010" class="shine-button">WhatsApp</a>
   </div>
 </div>
+
 
     `;
     modalsContainer.innerHTML += modal;
