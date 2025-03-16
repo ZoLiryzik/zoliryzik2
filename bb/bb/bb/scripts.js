@@ -20,6 +20,41 @@ const services = [
         description: "Полный ремонт ГБЦ",
         price: "от 5 000 ₽",
         image: "https://www.expresscarspenza.ru/img/products/3.jpg"
+    },
+    {
+        id: 4,
+        title: "Капитальный ремон",
+        description: "Капитальный ремонт двигателя",
+        price: "по договорённости",
+        image: "https://www.expresscarspenza.ru/img/products/4.jpg"
+    },
+    {
+        id: 5,
+        title: "Система охлождения",
+        description: "Замена радиатора, термостата, патрубков",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/5.jpg"
+    },
+    {
+        id: 6,
+        title: "Выхлопные системы",
+        description: "Замена глушителя, резонатора, удаление катализатора, замена гофры",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/6.jpg"
+    },
+    {
+        id: 7,
+        title: "Ремонт подвески",
+        description: "Замена амортизаторов, стоек, шаровых опор, рычагов подвески, замена сайлентблоков. Замена подшипников",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/7.jpg"
+    },
+    {
+        id: 8,
+        title: "Плановое ТО",
+        description: "Замена масла, фильтров",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/8.jpg"
     }
     // Добавьте другие услуги
 ];
@@ -28,7 +63,7 @@ const servicess = [
     {
         id: 1,
         title: "Компьютерная диагностика",
-        description: "Компьютерная диагностика автомобиля, адаптация дросселя и др.",
+        description: "Компьютерная диагностика автомобиля, адаптация дросселя и др",
         price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/1.jpg"
     },
@@ -37,14 +72,56 @@ const servicess = [
         title: "Эндоскопия двигателя",
         description: "Эндоскопия двигателя и катализатора",
         price: "от 500 ₽",
-        image: "https://www.expresscarspenza.ru/img/products/21.jpg"
+        image: "https://www.expresscarspenza.ru/img/products/2.jpg"
     },
     {
         id: 3,
         title: "Ремонт ГБЦ",
         description: "Полный ремонт ГБЦ",
         price: "от 5 000 ₽",
-        image: "https://www.expresscarspenza.ru/img/products/31.jpg"
+        image: "https://www.expresscarspenza.ru/img/products/3.jpg"
+    },
+    {
+        id: 4,
+        title: "Капитальный ремонт двигателя",
+        description: "Капитальный ремонт двигателя",
+        price: "по договорённости",
+        image: "https://www.expresscarspenza.ru/img/products/4.jpg"
+    },
+    {
+        id: 5,
+        title: "Ремонт системы охлаждения автомобиля",
+        description: "Замена радиатора, термостата, патрубков",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/5.jpg"
+    },
+    {
+        id: 6,
+        title: "Ремонт выхлопной системы автомобиля",
+        description: "Замена глушителя, резонатора, удаление катализатора, замена гофры",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/6.jpg"
+    },
+    {
+        id: 7,
+        title: "Ремонт подвески",
+        description: "Замена амортизаторов, стоек, шаровых опор, рычагов подвески, замена сайлентблоков. Замена подшипников.",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/7.jpg"
+    },
+    {
+        id: 8,
+        title: "Плановое ТО",
+        description: "Замена масла, фильтров",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/8.jpg"
+    },
+    {
+        id: 9,
+        title: "Тормозная система",
+        description: "Диагностика тормозных систем",
+        price: "по от 500 ₽",
+        image: "https://www.expresscarspenza.ru/img/products/8.jpg"
     }
     // Добавьте другие услуги
 ];
