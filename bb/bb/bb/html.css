@@ -82,7 +82,7 @@ a {
 
 /* Контент модального окна */
 .modal-content {
-  background-color: #fff;
+  background-color: #000000;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
