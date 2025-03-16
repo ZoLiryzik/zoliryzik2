@@ -91,6 +91,7 @@ a {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
   box-sizing: border-box; /* Учёт отступов */
+  top: -94px;
 }
 
 
