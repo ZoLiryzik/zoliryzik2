@@ -31,14 +31,14 @@ const services = [
     {
         id: 5,
         title: "Система охлождения",
-        description: "Замена радиатора, термостата, патрубков",
+        description: "Замена радиатора, термостата, патрубков<br><br>",
         price: "по от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/5.jpg"
     },
     {
         id: 6,
         title: "Выхлопные системы",
-        description: "Замена глушителя, резонатора, удаление катализатора, замена гофры",
+        description: "Замена глушителя, резонатора, удаление катализатора, замена гофры<br><br>",
         price: "по от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/6.jpg"
     },
