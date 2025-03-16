@@ -30,7 +30,7 @@ const servicess = [
         title: "Компьютерная диагностика",
         description: "Компьютерная диагностика автомобиля, адаптация дросселя и др.",
         price: "от 500 ₽",
-        image: "https://www.expresscarspenza.ru/img/products/11.jpg"
+        image: "https://www.expresscarspenza.ru/img/products/1.jpg"
     },
     {
         id: 2,
