@@ -1,0 +1,234 @@
+.search-bar {
+    margin: 16px;
+    text-align: center;
+}
+.search-bar input {
+    padding: 8px;
+    width: 80%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.svg-icon {
+  width: 30px;
+  height: 30px;
+  fill: #fff; /* цвет заливки SVG */
+  margin-right: 3%;
+}
+
+.svg-path {
+  stroke: #ff0000; /* цвет обводки */
+  stroke-width: 2; /* толщина обводки */
+}
+a {
+  text-decoration: none;
+}
+.container {
+  place-content: center; 
+}
+/* CSS */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    display: none;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Закругляем кнопку */
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1000; /* Выводим кнопку на передний план */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #000000;
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+/* Общее оформление модального окна */
+.modalq {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Фон-затемнение для модального окна */
+/* Общий стиль для модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px); /* Ширина с отступами */
+  max-width: 600px;
+  max-height: calc(100% - 40px); /* Высота с отступами */
+  background-color: transparent; /* Прозрачный фон */
+  border-radius: 12px;
+  z-index: 1000;
+  overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* Контент модального окна */
+.modal-content {
+  padding: 20px;
+  background-color: #fff; /* Белый фон для контента */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  box-sizing: border-box; /* Учёт отступов */
+}
+
+
+/* Иконка товара */
+.modal-icon {
+  display: block;
+  margin: 30px auto; /* Центрирование и отступы */
+  width: 150px; /* Размер иконки */
+  height: 150px;
+  border-radius: 50%; /* Круглая форма */
+  object-fit: cover; /* Полное заполнение без искажения */
+}
+
+/* Заголовки */
+.modal h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Текст */
+.modal p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.modal .info-text {
+  font-size: 16px;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* Кнопки */
+.shine-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.shine-button:hover {
+  background: #388e3c;
+}
+
+/* Кнопка закрытия */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #555;
+}
+
+/* Адаптация для планшетов */
+@media screen and (max-width: 1023px) {
+  .modal {
+    max-width: 90%; /* Ширина с учётом размера экрана */
+    max-height: calc(100% - 20px); /* Высота с отступами */
+  }
+
+  .modal-icon {
+    width: 130px; /* Уменьшение размера */
+    height: 130px;
+  }
+
+  .modal-content {
+    padding: 15px; /* Уменьшение отступов */
+  }
+}
+
+/* Адаптация для телефонов (портретная ориентация) */
+@media screen and (max-width: 768px) {
+  .modal {
+    max-width: 95%; /* Почти полная ширина */
+    max-height: calc(100% - 10px); /* Минимальные отступы */
+  }
+
+  .modal-icon {
+    width: 100px; /* Меньший размер для телефонов */
+    height: 100px;
+  }
+
+  .shine-button {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 90%; /* Кнопки растягиваются для удобства */
+  }
+}
+
+/* Адаптация для телефонов (ландшафтная ориентация) */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .modal {
+    max-width: 90%;
+    max-height: calc(100% - 20px);
+  }
+
+  .modal-icon {
+    width: 90px; /* Компактный размер */
+    height: 90px;
+  }
+
+  .shine-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Адаптация для больших экранов (ПК и телевизоры) */
+@media screen and (min-width: 1920px) {
+  .modal {
+    max-width: 1000px; /* Увеличение ширины */
+  }
+
+  .modal-icon {
+    width: 200px; /* Ещё больше иконка */
+    height: 200px;
+  }
+
+  .shine-button {
+    font-size: 18px; /* Крупные кнопки */
+    padding: 14px 28px;
+  }
+}
