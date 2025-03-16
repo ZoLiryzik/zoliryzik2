@@ -23,7 +23,31 @@ const services = [
     }
     // Добавьте другие услуги
 ];
-
+// Данные для карточек
+const servicess = [
+    {
+        id: 1,
+        title: "ПК диагностика",
+        description: "Компьютерная диагностика автомобиля, адаптация дросселя и др.",
+        price: "от 500 ₽",
+        image: "/img/products/1.jpg"
+    },
+    {
+        id: 2,
+        title: "Эндоскопия двигателя",
+        description: "Эндоскопия двигателя и катализатора",
+        price: "от 500 ₽",
+        image: "/img/products/2.jpg"
+    },
+    {
+        id: 3,
+        title: "Ремонт ГБЦ",
+        description: "Полный ремонт ГБЦ",
+        price: "от 5 000 ₽",
+        image: "/img/products/3.jpg"
+    }
+    // Добавьте другие услуги
+];
 // Генерация карточек
 const productContainer = document.getElementById("productContainer");
 services.forEach(service => {
@@ -44,9 +68,9 @@ services.forEach(service => {
 
 // Генерация модальных окон
 const modalsContainer = document.getElementById("modalsContainer");
-services.forEach(service => {
+servicess.forEach(service => {
     const modal = `
-        <div id="modal${service.id}" class="modal">
+        <div id="modal${services.id}" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal(${service.id})">&times;</span>
                 <h1>${service.title}</h1>
