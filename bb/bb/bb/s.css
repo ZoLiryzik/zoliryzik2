@@ -216,7 +216,7 @@ background-attachment: fixed;
   padding-right: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #000; /*  основной цвет элемент */
+  color: #fff; /*  основной цвет элемент */
   white-space: nowrap;
 }
 
@@ -226,7 +226,7 @@ background-attachment: fixed;
   align-items: flex-start;
   text-align: left;
   line-height: 1.3;
-  color: #333; /*  основной цвет элемент */
+  color: #fff; /*  основной цвет элемент */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   -webkit-line-clamp: 3;
