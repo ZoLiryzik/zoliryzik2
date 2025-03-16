@@ -68,7 +68,7 @@ a {
 /* Фон-затемнение для модального окна */
 /* Общий стиль для модального окна */
 .modal {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
