@@ -25,40 +25,40 @@ const services = [
         id: 4,
         title: "Капитальный ремон",
         description: "Капитальный ремонт двигателя",
-        price: "по договорённости",
+        price: "договорённости",
         image: "https://www.expresscarspenza.ru/img/products/4.jpg"
     },
     {
         id: 5,
         title: "Система охлождения",
         description: "Замена радиатора, термостата, патрубков<br><br>",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/5.jpg"
     },
     {
         id: 6,
         title: "Выхлопные системы",
         description: "Замена глушителя, резонатора, удаление катализатора, замена гофры<br><br>",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/6.jpg"
     },
     {
         id: 7,
         title: "Ремонт подвески",
         description: "Замена амортизаторов, стоек, шаровых опор, рычагов подвески, замена сайлентблоков. Замена подшипников",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/7.jpg"
     },
     {
         id: 8,
         title: "Плановое ТО",
         description: "Замена масла, фильтров",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/8.jpg"
     }
     // Добавьте другие услуги
 ];
-// Данные для карточек
+// Данные для модальных карточек
 const servicess = [
     {
         id: 1,
@@ -85,42 +85,42 @@ const servicess = [
         id: 4,
         title: "Капитальный ремонт двигателя",
         description: "Капитальный ремонт двигателя",
-        price: "по договорённости",
+        price: "договорённости",
         image: "https://www.expresscarspenza.ru/img/products/4.jpg"
     },
     {
         id: 5,
         title: "Ремонт системы охлаждения автомобиля",
         description: "Замена радиатора, термостата, патрубков",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/5.jpg"
     },
     {
         id: 6,
         title: "Ремонт выхлопной системы автомобиля",
         description: "Замена глушителя, резонатора, удаление катализатора, замена гофры",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/6.jpg"
     },
     {
         id: 7,
         title: "Ремонт подвески",
         description: "Замена амортизаторов, стоек, шаровых опор, рычагов подвески, замена сайлентблоков. Замена подшипников.",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/7.jpg"
     },
     {
         id: 8,
         title: "Плановое ТО",
         description: "Замена масла, фильтров",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/8.jpg"
     },
     {
         id: 9,
         title: "Тормозная система",
         description: "Диагностика тормозных систем",
-        price: "по от 500 ₽",
+        price: "от 500 ₽",
         image: "https://www.expresscarspenza.ru/img/products/8.jpg"
     }
     // Добавьте другие услуги
@@ -211,7 +211,7 @@ function searchProducts() {
     const cards = document.querySelectorAll(".card");
     let found = false;
 
-    // Поиск по карточкам
+    // Поиск карточкам
     cards.forEach(card => {
         const text = card.innerText.toLowerCase();
         if (text.includes(query)) {
@@ -268,7 +268,7 @@ function closeModal(id) {
 document.addEventListener("DOMContentLoaded", () => {
     const modals = document.querySelectorAll(".modal");
     modals.forEach(modal => {
-        modal.style.display = "none"; // Устанавливаем display: none по умолчанию
+        modal.style.display = "none"; // Устанавливаем display: none умолчанию
     });
 });
 
