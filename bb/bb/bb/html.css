@@ -93,7 +93,15 @@ a {
   box-sizing: border-box;
   text-align: center;
 }
-
+.modal-icon {
+    width: 100px; /* Устанавливаем ширину */
+    height: auto; /* Сохраняем пропорции */
+    border: 2px solid #ccc; /* Добавляем рамку */
+    border-radius: 10px; /* Закругляем углы */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+    margin: 10px; /* Отступы */
+    display: block; /* Блок для центрирования */
+}
 /* Кнопка закрытия */
 .close {
     position: absolute;
