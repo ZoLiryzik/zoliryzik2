@@ -68,30 +68,29 @@ a {
 /* Фон-затемнение для модального окна */
 /* Общий стиль для модального окна */
 .modal {
-  display: none; /* Скрыто по умолчанию */
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 40px); /* Ширина с отступами */
-  max-width: 600px;
-  max-height: calc(100% - 40px); /* Высота с отступами */
-  background-color: transparent; /* Прозрачный фон */
-  border-radius: 12px;
-  z-index: 1000;
-  overflow-y: auto; /* Вертикальная прокрутка при необходимости */
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%; /* Занимает всю ширину экрана */
+  height: 100%; /* Занимает всю высоту экрана */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  z-index: 1000; /* Выводим окно на передний план */
 }
 
 /* Контент модального окна */
 .modal-content {
+  background-color: #fff; /* Белый фон */
   padding: 20px;
-  background-color: #fff; /* Белый фон для контента */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
-  box-sizing: border-box; /* Учёт отступов */
+  width: 90%; /* Адаптивная ширина */
+  max-width: 600px; /* Максимальная ширина */
+  box-sizing: border-box; /* Учитываем padding в ширине */
 }
+
 
 
 /* Иконка товара */
