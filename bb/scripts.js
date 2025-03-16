@@ -68,14 +68,14 @@ services.forEach(service => {
 
 // Генерация модальных окон
 const modalsContainer = document.getElementById("modalsContainer");
-servicess.forEach(service => {
+servicess.forEach(serviceq => {
     const modal = `
-        <div id="modal${service.id}" class="modal">
+        <div id="modal${serviceq.id}" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal(${service.id})">&times;</span>
-                <h1>${service.title}</h1>
-                <img src='${service.image}' alt='${service.title}'>
-                <p>${service.description}</p>
+                <span class="close" onclick="closeModal(${serviceq.id})">&times;</span>
+                <h1>${serviceq.title}</h1>
+                <img src='${serviceq.image}' alt='${serviceq.title}'>
+                <p>${serviceq.description}</p>
                 <a href="tel:+79603211010">Позвонить</a>
                 <a href="https://t.me/+79603211010">Телеграм</a>
                 <a href="https://wa.me/79603211010">WhatsApp</a>
