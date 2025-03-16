@@ -70,7 +70,7 @@ services.forEach(service => {
 const modalsContainer = document.getElementById("modalsContainer");
 servicess.forEach(service => {
     const modal = `
-        <div id="modal${services.id}" class="modal">
+        <div id="modal${service.id}" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal(${service.id})">&times;</span>
                 <h1>${service.title}</h1>
