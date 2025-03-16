@@ -96,27 +96,37 @@ a {
 
 /* Кнопка закрытия */
 .close {
-  position: absolute;
-  top: 100px;
-  right: 28px;
-  font-size: 24px;
-  color: #999;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.close {
     position: absolute;
     top: 10px; /* Расположение сверху */
-    left: 50%; /* Смещение к центру по горизонтали */
-    transform: translateX(-50%); /* Центрирование */
-    font-size: 24px;
+    right: 10px; /* Расположение справа */
+    width: 30px;
+    height: 30px;
+    background-color: #ff4d4d; /* Яркий красный фон */
+    border: none;
+    border-radius: 50%; /* Закругленные края для круглой кнопки */
+    color: white; /* Цвет крестика */
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    color: red; /* Цвет крестика */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень для объема */
+    transition: all 0.3s ease; /* Плавные эффекты при наведении */
 }
+
 .close:hover {
-  color: #555;
+    background-color: #ff1a1a; /* Более яркий красный при наведении */
+    transform: scale(1.1); /* Легкое увеличение */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Усиленная тень */
 }
+
+.close:active {
+    transform: scale(0.9); /* Легкое уменьшение при нажатии */
+    background-color: #e60000; /* Цвет при нажатии */
+}
+
+
 
 
 
