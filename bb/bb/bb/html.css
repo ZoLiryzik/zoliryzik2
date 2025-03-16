@@ -99,7 +99,7 @@ a {
     border: 2px solid #ccc; /* Добавляем рамку */
     border-radius: 10px; /* Закругляем углы */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Добавляем тень */
-    margin: 10px; /* Отступы */
+    margin: 10px auto; /* Отступы */
     display: block; /* Блок для центрирования */
 }
 /* Кнопка закрытия */
