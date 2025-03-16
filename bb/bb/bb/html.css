@@ -95,8 +95,8 @@ a {
 /* Кнопка закрытия */
 .close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 100px;
+  right: 28px;
   font-size: 24px;
   color: #999;
   cursor: pointer;
