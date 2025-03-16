@@ -35,7 +35,21 @@ a {
   display: inline-block;
   font-size: 16px; /* становка размера шрифта */
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Устанавливаем высоту на весь экран */
+}
+.container {
+    flex: 1; /* Занимает всё доступное пространство, чтобы footer оставался внизу */
+}
 
+footer {
+    background: #333; /* Цвет фона footer */
+    color: #fff;      /* Цвет текста */
+    text-align: center;
+    padding: 10px;
+}
 body {
     font-family: 'Roboto', sans-serif; /* установливает как основной шрифт */
     background-color: #181818; /* цвет фона элемента */
