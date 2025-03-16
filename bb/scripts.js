@@ -36,7 +36,7 @@ services.forEach(service => {
             <h3 class='card-databox__heading'>${service.title}</h3>
             <div class='card-databox__description'><p>${service.description}</p><br><br>  </div>
             <div class='card-databox__description'><h1>${service.price}</h1></div>
-            <button onclick="openModal(${service.id})">Подробнее</button>
+            <button class="button" onclick="openModal(${service.id})">Подробнее</button>
         </div>
     `;
     productContainer.innerHTML += card;
