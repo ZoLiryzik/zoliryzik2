@@ -88,9 +88,33 @@ servicess.forEach(serviceq => {
 </div>
 
 
+
     `;
     modalsContainer.innerHTML += modal;
 });
+// Скрываем все модальные окна при загрузке страницы
+window.addEventListener("load", () => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach(modal => {
+    modal.style.display = "none"; // Устанавливаем display: none
+  });
+});
+
+// Функция для открытия модального окна
+function openModal(id) {
+  const modal = document.getElementById(`modal${id}`);
+  if (modal) {
+    modal.style.display = "flex"; // Показываем окно с flexbox
+  }
+}
+
+// Функция для закрытия модального окна
+function closeModal(id) {
+  const modal = document.getElementById(`modal${id}`);
+  if (modal) {
+    modal.style.display = "none"; // Скрываем окно
+  }
+}
 
 // Открытие модального окна
 function openModal(id) {
