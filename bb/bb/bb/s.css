@@ -206,6 +206,10 @@ background-attachment: fixed;
   padding: 25px 30px 20px 30px;
   overflow: hidden;
   background: #000000;
+  padding-top: 10px;    /* Отступ сверху */
+  padding-right: 15px;  /* Отступ справа */
+  padding-bottom: 10px; /* Отступ снизу */
+  padding-left: 15px;   /* Отступ слева */
 }
 
 .card-databox__heading {
