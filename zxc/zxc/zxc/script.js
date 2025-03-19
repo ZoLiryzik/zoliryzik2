@@ -1,48 +1,40 @@
-fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('avatar').src = data.avatar;
-        document.getElementById('name').textContent = data.name;
+document.addEventListener('DOMContentLoaded', () => {
+    const infoButton = document.getElementById('infoButton');
+    const modal = document.getElementById('modal');
+    const closeModal = document.querySelector('.close');
+    const tabs = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-        const infoButton = document.getElementById('infoButton');
-        const modal = document.getElementById('modal');
-        const closeModal = document.querySelector('.close');
+    // Load JSON data
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('avatar').src = data.avatar;
+            document.getElementById('name').textContent = data.name;
 
-        infoButton.addEventListener('click', () => {
-            // Загружаем данные для каждой вкладки
-            document.getElementById('tab1-title').textContent = data.info.tab1.title;
-            document.getElementById('tab1-description').textContent = data.info.tab1.description;
-
-            document.getElementById('tab2-title').textContent = data.info.tab2.title;
-            document.getElementById('tab2-description').textContent = data.info.tab2.description;
-
-            document.getElementById('tab3-title').textContent = data.info.tab3.title;
-            document.getElementById('tab3-description').textContent = data.info.tab3.description;
-
-            modal.style.display = 'flex';
+            document.getElementById('main').innerHTML = `<h3>${data.main.title}</h3><p>${data.main.description}</p>`;
+            document.getElementById('juniper').innerHTML = `<h3>${data.juniper.title}</h3><p>${data.juniper.description}</p>`;
+            document.getElementById('express').innerHTML = `<h3>${data.express.title}</h3><p>${data.express.description}</p>`;
         });
 
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
+    // Open modal
+    infoButton.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Tab switching
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelector('.tab-button.active').classList.remove('active');
+            document.querySelector('.tab-content.active').classList.remove('active');
+
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
         });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        const tabs = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
-            });
-        });
-    })
-    .catch(error => console.error('Error loading JSON data:', error));
+    });
+});
