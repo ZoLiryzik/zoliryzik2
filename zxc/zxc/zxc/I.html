@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Card & ZoLiryzik Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-menu">
+        <a class="navbar-logo" href="/"><img src="https://zoliryzik.github.io/assets/img/icon/zoliryzik.png" alt="Logo"></a>
+        <ul class="menu-main">
+            <li><a href="/">Главная</a></li>
+            <li><a href="https://zoliryzik.github.io/aboutus/">О нас</a></li>
+            <li><a href="https://zoliryzik.github.io/news/">Новости</a></li>
+        </ul>
+    </nav>
+
+    <div class="card">
+        <img id="avatar" src="" alt="Avatar">
+        <h2 id="name"></h2>
+        <button id="infoButton">Подробнее</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="tab1">Основное</button>
+                <button class="tab-button" data-tab="tab2">Juniper Bot</button>
+                <button class="tab-button" data-tab="tab3">Экспресс-Авто</button>
+            </div>
+            <div id="tab1" class="tab-content active">
+                <h3>Основное</h3>
+                <p>Я занимаюсь Juniper Ботом с 2022 года. Есть дискорд сервер и ютуб.</p>
+            </div>
+            <div id="tab2" class="tab-content">
+                <h3>Juniper Bot</h3>
+                <p>Могу написать почти любой код, например: квесты, команды на разные тематики, включая сталкер.</p>
+            </div>
+            <div id="tab3" class="tab-content">
+                <h3>Экспресс-Авто</h3>
+                <p>Являюсь создателем сайта Экспресс-Авто. Сайт регулярно обновляется.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
