@@ -1,18 +1,16 @@
 {
-    "avatar": "https://https://zoliryzik.github.io/assets/img/zoliryzik3.png",
-    "name": "ZoLiryzik",
-    "info": {
-        "tab1": {
-            "title": "Основная информация",
-            "description": "Информация была потеряна"
-        },
-        "tab2": {
-            "title": "Juniper Bot",
-            "description": "Увлекаюсь JB с 2022 году, могу написать почти любой код в JB."
-        },
-        "tab3": {
-            "title": "Экспресс-Авто",
-            "description": "Разработчик сайта Экспресс авто, который иногда улучшается."
-        }
+    "avatar": "https://zoliryzik.github.io/assets/img/icon/zoliryzik.png",
+    "name": "ZoLiryzik Creator",
+    "main": {
+        "title": "Основное",
+        "description": "Я занимаюсь Juniper Ботом с 2022 года. У нас есть дискорд сервер и ютуб."
+    },
+    "juniper": {
+        "title": "Juniper Bot",
+        "description": "Могу написать любой код: квесты, команды на разные тематики, включая сталкер."
+    },
+    "express": {
+        "title": "Экспресс-Авто",
+        "description": "Являюсь создателем сайта Экспресс-Авто. Сайт регулярно улучшается."
     }
 }
