@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модальное окно с меню</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button onclick="openModal()">Открыть модальное окно</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close-button" onclick="closeModal()">Закрыть</button>
+      <h2>Выберите раздел</h2>
+      <ul id="menu"></ul>
+      <div id="info" class="info-section"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
