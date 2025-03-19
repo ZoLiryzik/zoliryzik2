@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Modal with JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <img id="avatar" src="" alt="Avatar">
+        <h2 id="name"></h2>
+        <button id="infoButton">Подробнее</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="tab1">Основное</button>
+                <button class="tab-button" data-tab="tab2">Juniper Bot</button>
+                <button class="tab-button" data-tab="tab3">Экспресс-Авто</button>
+            </div>
+            <div id="tab1" class="tab-content active">
+                <h3 id="tab1-title"></h3>
+                <p id="tab1-content"></p>
+            </div>
+            <div id="tab2" class="tab-content">
+                <h3 id="tab2-title"></h3>
+                <p id="tab2-content"></p>
+            </div>
+            <div id="tab3" class="tab-content">
+                <h3 id="tab3-title"></h3>
+                <p id="tab3-content"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
