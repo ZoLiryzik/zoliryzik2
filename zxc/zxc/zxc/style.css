@@ -1,62 +1,65 @@
-/* Общий стиль страницы */
+/* Фон страницы с плавным градиентом и легкой текстурой */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background: radial-gradient(circle, #f3ecff, #c5cae9);
+    color: #2e2e2e;
 }
 
-/* Карточка аватара */
+/* Стиль карточки с мягкими краями и эффектами тени */
 .card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid #007bff;
+    border: 5px solid #7c4dff;
+    margin-bottom: 20px;
 }
 
 .card h2 {
-    font-size: 20px;
-    color: #333;
-    margin: 10px 0;
+    font-size: 24px;
+    color: #4527a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px 25px;
-    background-color: #007bff;
-    color: white;
-    font-size: 14px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(to right, #5e35b1, #8e24aa);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #7e57c2, #ba68c8);
+    transform: scale(1.05);
 }
 
-/* Модальное окно */
+/* Модальное окно с улучшенным дизайном */
 .modal {
     display: none;
     position: fixed;
@@ -64,58 +67,65 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #f3e5f5);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
     width: 90%;
     max-width: 500px;
-    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .close {
-    float: right;
     font-size: 20px;
     font-weight: bold;
+    color: #5e35b1;
     cursor: pointer;
-    color: #999;
+    float: right;
+    margin-top: -15px;
+    margin-right: -15px;
 }
 
 .close:hover {
-    color: #333;
+    color: #8e24aa;
 }
 
-/* Вкладки модального окна */
+/* Вкладки модального окна с яркими акцентами */
 .tabs {
     display: flex;
+    justify-content: center;
     margin-bottom: 20px;
-    justify-content: space-around;
 }
 
 .tab-button {
+    flex: 1;
+    margin: 0 5px;
     padding: 10px 15px;
-    background-color: #f0f0f0;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
     font-size: 14px;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background: #e3f2fd;
+    color: #5e35b1;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .tab-button.active {
-    background-color: #007bff;
+    background: #5e35b1;
     color: white;
 }
 
 .tab-button:hover {
-    background-color: #e0e0e0;
+    background: #ba68c8;
+    color: #ffffff;
 }
 
 .tab-content {
@@ -124,17 +134,29 @@ button:hover {
 
 .tab-content.active {
     display: block;
+    animation: fade-in 0.3s ease-in-out;
 }
 
-/* Заголовок и описание */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовки и текст описания */
 h3 {
-    font-size: 18px;
-    color: #333;
+    font-size: 22px;
+    color: #7b1fa2;
     margin-bottom: 10px;
 }
 
 p {
     font-size: 16px;
-    color: #666;
-    line-height: 1.5;
+    color: #616161;
+    line-height: 1.6;
 }
