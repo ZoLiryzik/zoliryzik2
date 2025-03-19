@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Модальное окно с меню</title>
+  <title>Карточка автора</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button onclick="openModal()">Открыть модальное окно</button>
+  <div class="author-card">
+    <img id="author-avatar" src="https://zoliryzik.github.io/assets/img/zoliryzik3.png" alt="Аватар автора" class="avatar">
+    <h3 id="author-name"ZoLiryzik</h3>
+    <button class="info-button" onclick="openModal()">Открыть информацию</button>
+  </div>
 
   <div id="modal" class="modal">
     <div class="modal-content">
-      <button class="close-button" onclick="closeModal()">Закрыть</button>
-      <h2>Выберите раздел</h2>
-      <ul id="menu"></ul>
-      <div id="info" class="info-section"></div>
+      <span class="close-button" onclick="closeModal()">×</span>
+      <h2>Информация об авторе</h2>
+      <p id="info">Здесь отображается информация.</p>
     </div>
   </div>
 
