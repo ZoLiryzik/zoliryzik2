@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .status {
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .open { background: #90EE90; color: darkgreen; }
+        .closed { background: #FFB6C1; color: darkred; }
+    </style>
+</head>
+<body>
+    <div id="status" class="status"></div>
+
+    <script>
+        // Настройки времени работы по МСК (UTC+3)
+        const workHours = {
+            open: 9,    // Открытие в 9:00 МСК
+            close: 18   // Закрытие в 18:00 МСК
+        };
+
+        function getMskTime() {
+            const now = new Date();
+            // Получаем UTC-время и конвертируем в МСК (UTC+3)
+            const utcHours = now.getUTCHours();
+            const utcMinutes = now.getUTCMinutes();
+            const mskHours = (utcHours + 3) % 24; // Корректируем переполнение
+            return {
+                hours: mskHours,
+                minutes: utcMinutes
+            };
+        }
+
+        function updateStatus() {
+            const mskTime = getMskTime();
+            const currentTotal = mskTime.hours * 60 + mskTime.minutes;
+            const openTime = workHours.open * 60;
+            const closeTime = workHours.close * 60;
+            const statusElement = document.getElementById('status');
+
+            if (currentTotal >= openTime && currentTotal < closeTime) {
+                statusElement.textContent = "🟢 ОТКРЫТО (МСК)";
+                statusElement.className = "status open";
+            } else {
+                statusElement.textContent = "🔴 ЗАКРЫТО (МСК)";
+                statusElement.className = "status closed";
+            }
+        }
+
+        // Запускаем обновление
+        updateStatus();
+        setInterval(updateStatus, 60000); // Проверка каждую минуту
+    </script>
+</body>
+</html>
